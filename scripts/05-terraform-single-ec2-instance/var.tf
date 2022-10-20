@@ -6,18 +6,18 @@
 variable "aws_region" {
   description = "AWS region"
   type        = string
-  default     = "us-east-1"
+#  default     = "us-east-1"
 }
  
 variable "owner" {
   description = "Configuration owner"
-  type        = string
+#  type        = string
 }
  
 variable "aws_region_az" {
   description = "AWS region availability zone"
   type        = string
-  default     = "a"
+#  default     = "a"
 }
  
  
@@ -27,19 +27,19 @@ variable "aws_region_az" {
 variable "vpc_cidr_block" {
   description = "CIDR block for the VPC"
   type        = string
-  default     = "10.0.0.0/16"
+#  default     = "10.0.0.0/16"
 }
  
 variable "vpc_dns_support" {
   description = "Enable DNS support in the VPC"
   type        = bool
-  default     = true
+#  default     = true
 }
  
 variable "vpc_dns_hostnames" {
   description = "Enable DNS hostnames in the VPC"
   type        = bool
-  default     = true
+#  default     = true
 }
  
  
@@ -49,37 +49,37 @@ variable "vpc_dns_hostnames" {
 variable "sg_ingress_proto" {
   description = "Protocol used for the ingress rule"
   type        = string
-  default     = "tcp"
+#  default     = "tcp"
 }
  
 variable "sg_ingress_ssh" {
   description = "Port used for the ingress rule"
   type        = string
-  default     = "22"
+#  default     = "22"
 }
  
 variable "sg_egress_proto" {
   description = "Protocol used for the egress rule"
   type        = string
-  default     = "-1"
+#  default     = "-1"
 }
  
 variable "sg_egress_all" {
   description = "Port used for the egress rule"
   type        = string
-  default     = "0"
+#  default     = "0"
 }
  
 variable "sg_egress_cidr_block" {
   description = "CIDR block for the egress rule"
   type        = string
-  default     = "0.0.0.0/0"
+#  default     = "0.0.0.0/0"
 }
  
 variable "sg_ingress_cidr_block" {
   description = "CIDR block for the ingress rule"
   type        = string
-  default     = "0.0.0.0/0"
+#  default     = "0.0.0.0/0"
 }
  
  
@@ -89,13 +89,13 @@ variable "sg_ingress_cidr_block" {
 variable "sbn_public_ip" {
   description = "Assign public IP to the instance launched into the subnet"
   type        = bool
-  default     = true
+#  default     = true
 }
  
 variable "sbn_cidr_block" {
   description = "CIDR block for the subnet"
   type        = string
-  default     = "10.0.1.0/24"
+#  default     = "10.0.1.0/24"
 }
  
  
@@ -105,7 +105,7 @@ variable "sbn_cidr_block" {
 variable "rt_cidr_block" {
   description = "CIDR block for the route table"
   type        = string
-  default     = "0.0.0.0/0"
+#  default     = "0.0.0.0/0"
 }
  
  
@@ -116,7 +116,7 @@ variable "instance_ami" {
   description = "ID of the AMI used"
   type        = string
   #default     = "ami-0211d10fb4a04824a"
-  default     = "ami-04ad2567c9e3d7893"
+#  default     = "ami-04ad2567c9e3d7893"
 
 }
  
@@ -124,23 +124,23 @@ variable "instance_type" {
   description = "Type of the instance"
   type        = string
   #default     = "t2.medium"
-  default     = "t2.micro"
+#  default     = "t2.micro"
 }
  
 variable "key_pair" {
   description = "SSH Key pair used to connect"
   type        = string
-  default     = "joc-key-pair"
+#  default     = "joc-key-pair"
 }
  
 variable "root_device_type" {
   description = "Type of the root block device"
   type        = string
-  default     = "gp2"
+#  default     = "gp2"
 }
  
 variable "root_device_size" {
   description = "Size of the root block device"
   type        = string
-  default     = "50"
+#  default     = "50"
 }
