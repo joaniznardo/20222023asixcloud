@@ -1,3 +1,7 @@
+# joan
+#*.tfvars
+*tfplan*
+
 # Local .terraform directories
 **/.terraform/*
 
