@@ -131,12 +131,12 @@ variable "key_pair_name" {
   description = "SSH Key pair used to connect"
   type        = string
 }
- 
-#variable "key_pair" {
-#  description = "SSH Key pair used to connect"
-#  type        = string
-#  default     = "joc-key-pair"
-#}
+
+variable "install_script_name" {
+  description = "cloud init data"
+  type        = string
+  default     = "silent-install.sh"
+}
  
 variable "root_device_type" {
   description = "Type of the root block device"

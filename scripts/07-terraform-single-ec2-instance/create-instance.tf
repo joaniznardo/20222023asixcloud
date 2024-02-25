@@ -29,6 +29,7 @@ resource "aws_instance" "instance" {
   subnet_id                   = aws_subnet.subnet.id
   #key_name                    = var.key_pair
   key_name                    = aws_key_pair.demo_key.key_name
+  user_data                   = "${file(var.install_script_name)}"
  
 #  root_block_device {
 #    delete_on_termination = true
