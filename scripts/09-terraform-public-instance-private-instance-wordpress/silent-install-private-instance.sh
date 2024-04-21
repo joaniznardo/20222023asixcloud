@@ -11,7 +11,8 @@ WORDPRESS_DOMAIN=asix-test-wp-02.duckdns.org
 # el nom de la base de dades no pot tindre "-" (crec)
 WORDPRESS_DB=wp_demo_db7
 WORDPRESS_USER=wp_demo_user2
-WORDPRESS_HOST='10.0.1.232'
+#WORDPRESS_HOST='10.0.1.232'
+WORDPRESS_HOST='XXXX'
 WORDPRESS_USER_PASS=P-3ssw8rd1nsegvr5
 
 

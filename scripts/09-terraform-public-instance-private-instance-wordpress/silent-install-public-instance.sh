@@ -6,7 +6,8 @@ WORDPRESS_DOMAIN=asix-test-wp-04.duckdns.org
 # el nom de la base de dades no pot tindre "-" (crec)
 WORDPRESS_DB=wp_demo_db7
 WORDPRESS_USER=wp_demo_user2
-WORDPRESS_HOST='10.0.2.66'
+#WORDPRESS_HOST='10.0.2.66'
+WORDPRESS_HOST='YYYY'
 WORDPRESS_USER_PASS=P-3ssw8rd1nsegvr5
 
 DEBIAN_FRONTEND="noninteractive"
@@ -90,5 +91,6 @@ snap install certbot --classic
 ### 
 ###
 ### sudo certbot -n --apache --agree-tos --redirect --hsts --uir --staple-ocsp --email demo@example.com -d $WORDPRESS_DOMAIN
-sudo certbot -n --apache --agree-tos --redirect --hsts --uir --staple-ocsp --email $EMAILCERTBOT -d $WORDPRESS_DOMAIN
+#sudo certbot -n --apache --agree-tos --redirect --hsts --uir --staple-ocsp --email $EMAILCERTBOT -d $WORDPRESS_DOMAIN
+sudo certbot -n --apache --agree-tos --redirect --hsts --uir --staple-ocsp --register-unsafely-without-email -d $WORDPRESS_DOMAIN
 

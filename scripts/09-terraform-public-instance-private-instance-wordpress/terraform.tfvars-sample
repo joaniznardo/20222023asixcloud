@@ -23,7 +23,7 @@ install_script_name_public_instance="nothing.sh"
 install_script_name_private_instance="nothing.sh"
 instance_ami = "ami-08c40ec9ead489470"
 instance_type = "t2.micro"
-key_pair_name = "demo-wordpress"
+key_pair_name = "demo-wordpress-pin02"
 root_device_type = "gp2"
 root_device_size = "20"
 
