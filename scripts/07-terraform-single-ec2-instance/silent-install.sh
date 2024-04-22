@@ -91,5 +91,5 @@ sed -i "/'NONCE_SALT'/ s/'put your unique phrase here'/'flipant02'/"  /srv/www/w
 
 snap install certbot --classic
 #sudo certbot --apache -d asix2a.duckdns.org
-#### sudo certbot --apache --agree-tos --redirect --hsts --uir --staple-ocsp --email you@example.com -d $WORDPRESS_DOMAIN,www.$WORDPRESS_DOMAIN
+#### sudo certbot --apache -n --agree-tos --redirect --hsts --uir --staple-ocsp  --register-unsafely-without-email -d $WORDPRESS_DOMAIN,www.$WORDPRESS_DOMAIN
 

@@ -19,7 +19,7 @@ rt_cidr_block = "0.0.0.0/0"
 instance_ami = "ami-08c40ec9ead489470"
 instance_type = "t2.micro"
 #key_pair = "joc-key-pair"
-key_pair_name = "demo-wordpress"
+key_pair_name = "demo-wordpress-pind04"
 root_device_type = "gp2"
 root_device_size = "50"
 
