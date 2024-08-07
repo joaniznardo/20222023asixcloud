@@ -8,7 +8,11 @@ resource "aws_instance" "instance-public" {
   vpc_security_group_ids      = [aws_security_group.public.id]
   subnet_id                   = aws_subnet.subnet-public.id
   key_name                    = aws_key_pair.demo_key.key_name
-  user_data                   = "${file(var.install_script_name_public_instance)}"
+
+#  user_data                   = "${file(var.install_script_name_public_instance)}"
+# fem servir una plantilla doncs cal passar la ip de la bbdd
+  user_data                   = data.template_cloudinit_config.config.rendered
+
  
  
   tags = {
@@ -16,4 +20,5 @@ resource "aws_instance" "instance-public" {
     "Name"                = "${var.owner}-instance-public"
     "KeepInstanceRunning" = "false"
   }
+  depends_on = [aws_instance.instance_private]
 }
