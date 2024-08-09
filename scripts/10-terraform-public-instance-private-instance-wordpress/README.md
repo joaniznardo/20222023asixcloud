@@ -1,6 +1,6 @@
 # demo terraform #9 - aws 2 instances in public/private network  
 
-## LAB amb intervenció manual
+## LAB SENSE intervenció manual - pendent de resoldre el domini (no generarà el certificat)
 
 1) crear la infraestructura
 1.1) renomenar terraform.tfvars-sample a terraform.tfvars
