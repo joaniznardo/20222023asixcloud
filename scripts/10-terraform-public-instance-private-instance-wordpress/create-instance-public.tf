@@ -9,14 +9,16 @@ resource "aws_instance" "instance-public" {
   subnet_id                   = aws_subnet.subnet-public.id
   key_name                    = aws_key_pair.demo_key.key_name
 
-  user_data                   = "${file(var.install_script_name_public_instance)}"
-
+#  user_data                   = "${file(var.install_script_name_public_instance)}"
+# fem servir una plantilla doncs cal passar la ip de la bbdd
+#  user_data_base64                   = "${data.template_cloudinit_config.config.rendered}"
+  user_data                   = templatefile("silent-install-public-instance.sh", {instance_target_host = aws_instance.instance-private.private_ip})
  
  
   tags = {
     "Owner"               = var.owner
-    "Name"                = "${var.owner}-instance-public"
+    "Name"                = "${var.owner}-instance-public-a"
     "KeepInstanceRunning" = "false"
   }
-  depends_on = [aws_instance.instance_private]
+  depends_on = [aws_instance.instance-private]
 }

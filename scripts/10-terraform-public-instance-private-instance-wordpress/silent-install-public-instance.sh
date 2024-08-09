@@ -1,14 +1,14 @@
 #!/bin/bash
-sed  -i -e '/{restart}/ s/i/l/' -e '/{restart}/ s/^#//' /etc/needrestart/needrestart.conf
-
+#------------# sed  -i -e '/{restart}/ s/i/l/' -e '/{restart}/ s/^#//' /etc/needrestart/needrestart.conf
+## source /opt/server_ip
 EMAILCERTBOT=changeme@sis.plau 
 WORDPRESS_DOMAIN=asix-test-wp-04.duckdns.org
 # el nom de la base de dades no pot tindre "-" (crec)
 WORDPRESS_DB=wp_demo_db7
 WORDPRESS_USER=wp_demo_user2
 #WORDPRESS_HOST='10.0.2.66'
-## ---- aquest valor s'informa en un altre script
-WORDPRESS_HOST=$instance_target_host
+## ---- aquest valor esta un altre script
+WORDPRESS_HOST=${instance_target_host}
 WORDPRESS_USER_PASS=P-3ssw8rd1nsegvr5
 
 DEBIAN_FRONTEND="noninteractive"
@@ -29,9 +29,6 @@ apt -qq install -y apache2 \
                  php-xml \
                  php-zip \
                  pwgen
-                 
-
-
 
 mkdir -p /srv/www
 
@@ -94,4 +91,3 @@ snap install certbot --classic
 ### sudo certbot -n --apache --agree-tos --redirect --hsts --uir --staple-ocsp --email demo@example.com -d $WORDPRESS_DOMAIN
 #sudo certbot -n --apache --agree-tos --redirect --hsts --uir --staple-ocsp --email $EMAILCERTBOT -d $WORDPRESS_DOMAIN
 sudo certbot -n --apache --agree-tos --redirect --hsts --uir --staple-ocsp --register-unsafely-without-email -d $WORDPRESS_DOMAIN
-
