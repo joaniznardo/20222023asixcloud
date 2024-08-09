@@ -15,4 +15,5 @@ resource "aws_instance" "instance-private" {
     "Name"                = "${var.owner}-instance-private"
     "KeepInstanceRunning" = "false"
   }
+  depends_on = [aws_nat_gateway.ngw,aws_route.sortida_private]
 }
